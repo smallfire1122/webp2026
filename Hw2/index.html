@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 6px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2;}
+        tr:hover {background-color: #ddd;}
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>資工選課表</h1>
+    <table id="csie">
+        <tr>
+            <th>開課單位</th>
+            <th>課程名稱</th>
+            <th>授課教師</th>
+        </tr>
+        <tr onclick="openCourse('https://catalog.cgu.edu.tw/coursedata?sectionid=A2337')">
+            <td>資工系</td>
+            <td>物件導向軟體設計</td>
+            <td>黃崇源</td>
+        </tr>
+        <tr onclick="openCourse('https://catalog.cgu.edu.tw/coursedata?sectionid=61602')">
+            <td>資工系</td>
+            <td>計算機網路實驗</td>
+            <td>李春良</td>
+        </tr>
+        <tr onclick="openCourse('https://catalog.cgu.edu.tw/coursedata?sectionid=61603')">
+            <td>資工系</td>
+            <td>作業系統實務</td>
+            <td>張哲維</td>
+        </tr>
+        <tr onclick="openCourse('https://catalog.cgu.edu.tw/coursedata?sectionid=71796')">
+            <td>資工系</td>
+            <td>生物統計</td>
+            <td>陳光武</td>
+        </tr>
+        <tr onclick="openCourse('https://catalog.cgu.edu.tw/coursedata?sectionid=A2339')">
+            <td>資工系</td>
+            <td>通訊系統</td>
+            <td>陳仁輝</td>
+        </tr>
+        <tr onclick="openCourse('https://catalog.cgu.edu.tw/coursedata?sectionid=56665')">
+            <td>資工系</td>
+            <td>軟硬體專題(2)</td>
+            <td>魏志達</td>
+        </tr>
+    </table>
+
+    <div id="course_popover" popover style="width: 60%; height: 90%; padding: 0; border: 1px solid #ccc; border-radius: 8px;">
+    <button onclick="document.getElementById('course_popover').hidePopover()" style="position: absolute; right: 10px; top: 10px; z-index: 10;">關閉</button>
+    
+    <iframe id="course_frame" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+</div>
+
+    <button onclick="changeResult()">Change</button>
+    <script>
+        function openCourse(url) {
+            var frame = document.getElementById('course_frame');
+            frame.src = url;
+            document.getElementById('course_popover').showPopover();
+        }
+
+        function changeResult() {
+            var myTable = document.getElementById("csie");
+            myTable.rows[1].cells[2].innerHTML = "李春良";
+        }
+    </script>
+</body>
+</html>
