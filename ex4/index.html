@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tree</title>
+</head>
+<body>
+    <script>
+        function tree(n) {
+            printTreeTop(n);
+            printTreeBottom(n);
+        }
+
+        function printTreeTop(n) {
+            for (var i = 0; i < n; i++) {
+                console.log(repeatchar(n - 1 - i, ' ') + repeatchar(2 * i + 1, '*'));
+            }
+        }
+
+        function printTreeBottom(n) {
+            for (var i = 0; i < 3; i++) {
+                console.log(repeatchar(n - 1, ' ') + '*');
+            }
+        }
+
+        function repeatchar(n, arg_char) {
+            var result = '';
+            for (var i = 0; i < n; i++) {
+                result = result + arg_char;
+            }
+            return result;
+        }
+
+        tree(67);
+    </script>
+</body>
+</html>
