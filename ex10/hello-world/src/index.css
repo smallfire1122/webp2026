@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1b1f2a;
+  background:
+    radial-gradient(circle at top left, rgba(42, 91, 215, 0.18), transparent 30%),
+    linear-gradient(180deg, #f6f8fc 0%, #dfe8ff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
