@@ -1,5 +1,4 @@
 import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 import DeleteIcon from '@mui/icons-material/Delete'
 import AlarmIcon from '@mui/icons-material/Alarm'
@@ -21,16 +20,15 @@ const buttonItems = [
 
 function MultiButton() {
   return buttonItems.map(({ label, icon }) => (
-    <Tooltip key={label} title={label}>
-      <IconButton
-        color="primary"
-        aria-label={label}
-        size="large"
-        className="icon-button"
-      >
-        {icon}
-      </IconButton>
-    </Tooltip>
+    <IconButton
+      key={label}
+      color="primary"
+      aria-label={label}
+      size="large"
+      className="icon-button"
+    >
+      {icon}
+    </IconButton>
   ))
 }
 
