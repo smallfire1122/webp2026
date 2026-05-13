@@ -1,0 +1,76 @@
+.page-shell {
+  min-height: 100vh;
+  padding: 40px 16px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 181, 71, 0.2), transparent 25%),
+    radial-gradient(circle at left top, rgba(16, 185, 129, 0.18), transparent 30%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4f1 100%);
+}
+
+.hero-card {
+  padding: 28px;
+  border: 2px dashed #f1b547;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.hero-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.eyebrow {
+  color: #dd8d00;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.hero-title {
+  color: #223047;
+  font-weight: 800;
+}
+
+.hero-text {
+  max-width: 760px;
+  color: #556274;
+}
+
+.search-field {
+  max-width: 360px;
+}
+
+.status-row {
+  align-items: flex-start;
+}
+
+.status-pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #edf7f2;
+  color: #2b5c4b;
+  border: 1px solid #cce7d9;
+}
+
+.grid-frame {
+  min-height: 640px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #d9e2ec;
+  background: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 18px 10px;
+  }
+
+  .hero-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .grid-frame {
+    min-height: 560px;
+  }
+}
