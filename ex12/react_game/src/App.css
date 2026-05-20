@@ -1,0 +1,136 @@
+.game-shell {
+  width: min(760px, calc(100% - 32px));
+  margin: 32px auto;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.game-title {
+  margin: 0 0 18px;
+  color: #183153;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.game-actions {
+  margin-bottom: 18px;
+}
+
+.primary-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.game-board {
+  flex: 0 0 auto;
+}
+
+.status {
+  margin-bottom: 14px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #102a43;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  width: 88px;
+  height: 88px;
+  margin-right: -1px;
+  margin-top: -1px;
+  float: left;
+  border: 1px solid #9aa5b1;
+  background: #fff;
+  color: #000;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.square:hover:enabled {
+  background: #eff6ff;
+}
+
+.square:disabled {
+  cursor: default;
+}
+
+.square:focus {
+  outline: none;
+  background: #dbeafe;
+}
+
+.game-info {
+  flex: 1 1 240px;
+}
+
+.game-info h2 {
+  margin: 0 0 12px;
+  color: #183153;
+  font-size: 2rem;
+}
+
+.game-info ol {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.game-info li {
+  margin-bottom: 12px;
+}
+
+.history-button {
+  padding: 8px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  background: #fff;
+  color: #111827;
+  cursor: pointer;
+}
+
+.history-button:hover {
+  background: #f8fbff;
+}
+
+@media (max-width: 640px) {
+  .game-shell {
+    padding: 20px;
+  }
+
+  .square {
+    width: 72px;
+    height: 72px;
+    font-size: 1.9rem;
+  }
+
+  .status {
+    font-size: 1.25rem;
+  }
+}
